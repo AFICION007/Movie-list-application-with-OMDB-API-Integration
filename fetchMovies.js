@@ -6,6 +6,14 @@ async function fetchMovies(searchQuery, page, resultsPerPage = 10) {
         searchQuery
     )}&page=${page}&r=json&type=movie`;
 
+    //check if the cached data is already present in localStorage
+    const cacheKey = `movies_${searchQuery}_${page}`;
+    const cachedData = localStorage.getItem(cacheKey);
+    if (cachedData) {
+        return JSON.parse(cachedData);
+    }
+
+    //else fetch it from Omdb api
     try {
         const response = await fetch(apiUrl);
 
@@ -21,6 +29,10 @@ async function fetchMovies(searchQuery, page, resultsPerPage = 10) {
 
         const totalPages = Math.ceil(data.totalResults / resultsPerPage);
         const movies = data.Search || [];
+
+        // Cache the fetched data in localStorage for later usage
+        const dataToCache = { movies, totalPages };
+        localStorage.setItem(cacheKey, JSON.stringify(dataToCache));
 
         return {
             movies,
