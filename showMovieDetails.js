@@ -1,4 +1,4 @@
-function showMovieDetails(movieId, cacheKey) {
+export default function showMovieDetails(movieId, cacheKey) {
     const cachedData = localStorage.getItem(cacheKey);
     if (cachedData) {
         const moviesData = JSON.parse(cachedData);
