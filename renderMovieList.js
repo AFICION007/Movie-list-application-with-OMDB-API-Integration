@@ -2,7 +2,7 @@ import showMovieDetails from "./showMovieDetails";
 
 export default function renderMovieList(
     movies,
-    currentPage,
+    currentPage = 1,
     resultsPerPage = 10
 ) {
     const movieListElement = document.getElementById("movieList");
