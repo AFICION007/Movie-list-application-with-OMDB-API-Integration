@@ -1,6 +1,6 @@
 //The following represents the foundation structure of our app
 
-// All the functions mentioned are completed in separate files
+//  All the functions mentioned are completed in separate files
 
 // Variables to keep track of the current state
 let currentPage = 1;
