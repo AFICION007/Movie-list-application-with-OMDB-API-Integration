@@ -1,19 +1,22 @@
-async function fetchMovies(searchQuery, page, resultsPerPage = 10) {
-    const apiKey = "cc49bf55";
-    //We use encodeURIComponent() to ensure that the search query is properly encoded before appending it to the URL.
-    //This handles special characters and prevents potential issues with invalid URLs.
-    const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(
-        searchQuery
-    )}&page=${page}&r=json&type=movie`;
+// Global variables
+const apiKey = "cc49bf55";
 
-    //check if the cached data is already present in localStorage
-    const cacheKey = `movies_${searchQuery}_${page}`;
+// We use encodeURIComponent() to ensure that the search query is properly encoded before appending it to the URL.
+// This handles special characters and prevents potential issues with invalid URLs.
+const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(
+    searchQuery
+)}&r=json&type=movie`;
+
+const cacheKey = `movies_${searchQuery}`;
+
+async function fetchMovies(resultsPerPage = 10) {
+    // check if the cached data is already present in localStorage
     const cachedData = localStorage.getItem(cacheKey);
     if (cachedData) {
         return JSON.parse(cachedData);
     }
 
-    //else fetch it from Omdb api
+    // else fetch it from Omdb api
     try {
         const response = await fetch(apiUrl);
 

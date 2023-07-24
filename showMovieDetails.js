@@ -1,7 +1,5 @@
-export default function showMovieDetails(movieId, cacheKey) {
-    const cachedData = localStorage.getItem(cacheKey);
-    if (cachedData) {
-        const moviesData = JSON.parse(cachedData);
+export default function showMovieDetails(movieId, moviesData) {
+    if (moviesData) {
         const selectedMovie = moviesData.find(
             (movie) => movie.imdbID === movieId
         );
@@ -11,7 +9,7 @@ export default function showMovieDetails(movieId, cacheKey) {
             return;
         }
     }
-    //movie details not found in localStorage
+    // movie details not found in localStorage
     fetchMovieDetailsFromAPI(movieId);
 }
 

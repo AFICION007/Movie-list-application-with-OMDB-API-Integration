@@ -1,12 +1,10 @@
 import showMovieDetails from "./showMovieDetails";
 
 export default function renderMovieList(
-    cachedData,
+    movies,
     currentPage,
     resultsPerPage = 10
 ) {
-    const { movies } = cachedData;
-
     const movieListElement = document.getElementById("movieList");
     movieListElement.innerHTML = "";
 
