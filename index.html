@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="./index.css" rel="stylesheet" />
+        <link href="./search-bar.css" rel="stylesheet" />
+        <link href="./main-movie-content.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div>
+                <span id="the-heading">The</span>
+                <span id="trailers-heading">trailers</span>
+            </div>
+            <form>
+                <div class="search-box-container">
+                    <div class="search-box">
+                        <input
+                            class="search-bar"
+                            type="text"
+                            placeholder="Search"
+                        />
+                    </div>
+                    <div class="search-button-container">
+                        <button class="search-button">
+                            <img
+                                class="search-logo"
+                                src="../assets/search.svg"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="top-container">
+            <div class="background">
+                <div class="top-gradient"></div>
+                <div class="bottom-gradient"></div>
+            </div>
+            <div class="main-movie-content">
+                <span class="director">Aaron Harvoth</span>
+                <span class="director">Michael Jelenic</span>
+                <h1 class="movie-heading">The Super Mario Bros. Movie</h1>
+                <div class="genre-container">
+                    <ul class="genre-list">
+                        <li class="genre button-blur-effect-genre">
+                            <span class="genre-text">Fantasy</span>
+                        </li>
+                        <li class="genre button-blur-effect-genre">
+                            <span class="genre-text">Family</span>
+                        </li>
+                        <li class="genre button-blur-effect-genre">
+                            <span class="genre-text">Action</span>
+                        </li>
+                        <li class="genre button-blur-effect-genre">
+                            <span class="genre-text">Adventure</span>
+                        </li>
+                    </ul>
+                    <div class="share-button-container">
+                        <button class="share-button">
+                            <img
+                                class="share-icon"
+                                src="./assets/share.png"
+                                alt="share icon"
+                            />
+                        </button>
+                    </div>
+                </div>
+                <div class="buttons-container">
+                    <button class="main-movie-big-buttons" id="play-button">
+                        <img
+                            class="play-icon"
+                            src="./assets/play.png"
+                            alt="play icon"
+                        />
+                    </button>
+                    <div class="main-movie-big-buttons big-button-blur-effect">
+                        <span class="vertical-text">RATING</span>
+                        <span class="big-buttons-text">PG</span>
+                    </div>
+                    <div class="main-movie-big-buttons big-button-blur-effect">
+                        <span class="vertical-text">RELEASE</span>
+                        <span class="big-buttons-text">April 7, 2023</span>
+                    </div>
+                    <div class="main-movie-big-buttons big-button-blur-effect">
+                        <span class="vertical-text">BUDGET</span>
+                        <span class="big-buttons-text">$130M</span>
+                    </div>
+                    <div
+                        class="main-movie-big-buttons big-button-blur-effect"
+                        id="length"
+                    >
+                        <span class="vertical-text">LENGTH</span>
+                        <span class="big-buttons-text">126 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
