@@ -41,12 +41,13 @@ span#trailers-heading {
 
 .top-container {
     position: relative;
+    height: 574px;
 }
 
 div.background {
     /* position: absolute; */
     height: 495px;
-    background: url(./assets/mario-luigi.webp);
+    background: url(../assets/mario-luigi.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

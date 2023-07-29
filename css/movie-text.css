@@ -1,0 +1,51 @@
+.main-movie-text {
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    margin-inline: 95px;
+}
+
+#description {
+    width: 685px;
+}
+
+.text-title {
+    color: #37444b;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.movie-description {
+    color: #a1a8ab;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#hype {
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-ratings-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rating-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.rating {
+    font-size: 22px;
+    font-family: 'Bebas neue';
+    margin-right: 25px;
+    color: white;
+}
